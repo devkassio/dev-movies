@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import Home from '../src/containers/Home';
-import Movies from '../src/containers/Movies';
-import Series from '../src/containers/Series';
+import Home from '../containers/Home';
+import Movies from '../containers/Movies';
+import Series from '../containers/Series';
 
 function Routers() {
   return (

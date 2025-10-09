@@ -1,4 +1,17 @@
+import api from '../../services/api';
+
 function Home() {
+  async function getMovies() {
+    try {
+      const response = await api.get('/movie/popular');
+      console.log(response.data);
+    } catch (error) {
+      console.error('Error fetching movies:', error);
+    }
+  }
+
+  getMovies();
+
   return (
     <div>
       <div>
