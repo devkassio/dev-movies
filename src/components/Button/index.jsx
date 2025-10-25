@@ -7,7 +7,6 @@ export default function Button({ children, red }) {
       ) : (
         <ButtonWhite>{children}</ButtonWhite>
       )}
-      ;
     </>
   );
 }

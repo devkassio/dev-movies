@@ -12,5 +12,6 @@ export default createGlobalStyle`
         background: #000000;
          font-family: "Montserrat", sans-serif;
          color: #ffffff;
+         overflow-x: hidden;
     }
 `;
