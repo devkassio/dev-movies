@@ -12,6 +12,7 @@ export default function Home() {
   const [topSeries, setTopSeries] = useState([]);
   const [popularSeries, setPopularSeries] = useState([]);
   const [persons, setPersons] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     async function getMovies() {
@@ -79,18 +80,28 @@ export default function Home() {
     getPersons();
   }, []);
 
+  const handleTrailerClick = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div>
       {movies && (
         <Background img={getImages(movies.backdrop_path)}>
-          <Modal movieId={movies.id} />
+          {showModal && (
+            <Modal movieId={movies.id} onClose={handleCloseModal} />
+          )}
           <Container>
             <Info>
               <h1>{movies.title}</h1>
               <p>{movies.overview}</p>
               <div>
                 <Button red>Assistir agora</Button>
-                <Button>Assistir o trailer</Button>
+                <Button onClick={handleTrailerClick}>Assistir o trailer</Button>
               </div>
             </Info>
             <Poster>
