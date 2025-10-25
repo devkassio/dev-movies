@@ -56,7 +56,7 @@ export default function Header() {
       case 'series':
         return pathname === '/series';
       case 'default':
-        return ;
+        return;
       default:
         return false;
     }
