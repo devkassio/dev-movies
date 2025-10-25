@@ -109,7 +109,7 @@ export default function Home() {
         <Slider info={popularSeries} title="Series Populares" />
       )}
       {persons && persons.length > 0 && (
-        <Slider info={persons} title="Pessoas Populares" />
+        <Slider info={persons} title="Artistas Populares" />
       )}
     </div>
   );

@@ -7,7 +7,7 @@ export default function Card({ item }) {
   return (
     <Container>
       <img src={getImages(imagePath)} alt={title} />
-      <h3>{title}</h3>
+      <h3>{item.title || item.name}</h3>
     </Container>
   );
 }
