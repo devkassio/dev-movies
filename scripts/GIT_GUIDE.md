@@ -14,17 +14,16 @@ git config --global alias.unstage 'reset HEAD --'
 git config --global alias.last 'log -1 HEAD'
 git config --global alias.visual '!gitk'
 git config --global alias.pushf 'push --force-with-lease'
-git config --global alias.pom 'push origin master'
-git config --global alias.puom 'pull origin master'
+git config --global alias.pom 'push origin main'
+git config --global alias.puom 'pull origin main'
 ```
 
 ## 🚀 Comandos Rápidos para DevMovies
 
 ### Commit Rápido
-
 ```bash
 # Adicionar, commitar e fazer push em um comando
-git add . && git commit -m "feat: 🎬 atualizações" && git push origin master
+git add . && git commit -m "feat: 🎬 atualizações" && git push origin main
 ```
 
 ### Verificar Status
@@ -34,15 +33,13 @@ git st  # em vez de git status
 ```
 
 ### Push Rápido
-
 ```bash
-git pom  # em vez de git push origin master
+git pom  # em vez de git push origin main
 ```
 
 ### Pull Rápido
-
 ```bash
-git puom  # em vez de git pull origin master
+git puom  # em vez de git pull origin main
 ```
 
 ## 📋 Scripts Disponíveis

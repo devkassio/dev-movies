@@ -37,7 +37,7 @@ $doPush = Read-Host "🚀 Fazer push para GitHub? (y/n)"
 
 if ($doPush -eq "y" -or $doPush -eq "Y") {
     Write-Host "🌐 Enviando para GitHub..." -ForegroundColor Yellow
-    git push origin master
+    git push origin main
     Write-Host "✅ Push realizado com sucesso!" -ForegroundColor Green
 }
 

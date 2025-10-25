@@ -39,7 +39,7 @@ read -p "🚀 Fazer push para GitHub? (y/n): " do_push
 
 if [ "$do_push" = "y" ] || [ "$do_push" = "Y" ]; then
     echo "🌐 Enviando para GitHub..."
-    git push origin master
+    git push origin main
     echo "✅ Push realizado com sucesso!"
 fi
 
