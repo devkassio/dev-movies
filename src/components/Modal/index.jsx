@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import api from '../../services/api';
-import { Background, Container } from './styles';
+import { Background, CloseModal, Container } from './styles';
 
 export default function Modal({ movieId, setShowModal }) {
   const [movies, setMovies] = useState([]);
@@ -20,7 +20,8 @@ export default function Modal({ movieId, setShowModal }) {
   }, [movieId]);
 
   return (
-    <Background onClick={() => setShowModal(false)}>
+    <Background /* onClick={() => setShowModal(false)} */>
+      <CloseModal onClick={() => setShowModal(false)}>X</CloseModal>
       <Container>
         <iframe
           src={`https://www.youtube.com/embed/${movies.key}`}

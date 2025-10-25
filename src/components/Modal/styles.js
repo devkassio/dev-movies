@@ -20,3 +20,23 @@ export const Background = styled.div`
   width: 100%;
   height: 100vh;
 `;
+
+export const CloseModal = styled.button`
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #c3c3c377;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 999999;
+
+  &:hover {
+    background: #ff0000ff;
+  }
+`;
