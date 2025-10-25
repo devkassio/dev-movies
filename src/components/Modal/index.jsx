@@ -20,7 +20,7 @@ export default function Modal({ movieId, setShowModal }) {
   }, [movieId]);
 
   return (
-    <Background /* onClick={() => setShowModal(false)} */>
+    <Background onClick={() => setShowModal(false)} >
       <CloseModal onClick={() => setShowModal(false)}>X</CloseModal>
       <Container>
         <iframe

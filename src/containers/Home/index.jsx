@@ -3,7 +3,7 @@ import Button from '../../components/Button';
 import Slider from '../../components/Slider';
 import api from '../../services/api';
 import { getImages } from '../../utils/getImages';
-import { Background, Container, Info, Poster } from './styles';
+import { Background, Container, Info, Poster, Section } from './styles';
 import Modal from '../../components/Modal';
 
 export default function Home() {
@@ -80,35 +80,41 @@ export default function Home() {
   return (
     <div>
       {movies && (
-        <Background img={getImages(movies.backdrop_path)}>
-          { showModal && <Modal movieId={movies.id} setShowModal={setShowModal} />}
-          <Container>
-            <Info>
-              <h1>{movies.title}</h1>
-              <p>{movies.overview}</p>
-              <div>
-                <Button red>Assistir agora</Button>
-                <Button onClick={() => setShowModal(true)}>Assistir o trailer</Button>
-              </div>
-            </Info>
-            <Poster>
-              <img src={getImages(movies.poster_path)} alt={movies.title} />
-            </Poster>
-          </Container>
-        </Background>
+        <Section id="home">
+          <Background img={getImages(movies.backdrop_path)}>
+            { showModal && <Modal movieId={movies.id} setShowModal={setShowModal} />}
+            <Container>
+              <Info>
+                <h1>{movies.title}</h1>
+                <p>{movies.overview}</p>
+                <div>
+                  <Button red>Assistir agora</Button>
+                  <Button onClick={() => setShowModal(true)}>Assistir o trailer</Button>
+                </div>
+              </Info>
+              <Poster>
+                <img src={getImages(movies.poster_path)} alt={movies.title} />
+              </Poster>
+            </Container>
+          </Background>
+        </Section>
       )}
-      {topMovies && topMovies.length > 0 && (
-        <Slider info={topMovies} title="Top Filmes" />
-      )}
-      {topSeries && topSeries.length > 0 && (
-        <Slider info={topSeries} title="Top Series" />
-      )}
-      {popularSeries && popularSeries.length > 0 && (
-        <Slider info={popularSeries} title="Series Populares" />
-      )}
-      {persons && persons.length > 0 && (
-        <Slider info={persons} title="Artistas Populares" />
-      )}
+      <Section id="movies">
+        {topMovies && topMovies.length > 0 && (
+          <Slider info={topMovies} title="Top Filmes" />
+        )}
+        {popularSeries && popularSeries.length > 0 && (
+          <Slider info={popularSeries} title="Filmes Populares" />
+        )}
+      </Section>
+      <Section id="series">
+        {topSeries && topSeries.length > 0 && (
+          <Slider info={topSeries} title="Top Séries" />
+        )}
+        {persons && persons.length > 0 && (
+          <Slider info={persons} title="Artistas Populares" />
+        )}
+      </Section>
     </div>
   );
 }
