@@ -21,6 +21,7 @@ git config --global alias.puom 'pull origin main'
 ## 🚀 Comandos Rápidos para DevMovies
 
 ### Commit Rápido
+
 ```bash
 # Adicionar, commitar e fazer push em um comando
 git add . && git commit -m "feat: 🎬 atualizações" && git push origin main
@@ -33,11 +34,13 @@ git st  # em vez de git status
 ```
 
 ### Push Rápido
+
 ```bash
 git pom  # em vez de git push origin main
 ```
 
 ### Pull Rápido
+
 ```bash
 git puom  # em vez de git pull origin main
 ```

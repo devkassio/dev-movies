@@ -1,13 +1,16 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
 import { Container, Li, Menu } from './styles';
 
 export default function Header() {
+  const { pathname } = useLocation();
+  console.log(pathname);
+
   return (
     <Container>
       <img src={Logo} alt="Logo-DevMovies" />
       <Menu>
-        <Li>
+        <Li $isActive={pathname === '/'} > {/* // $isActive corrijr depois */}
           <Link to="/">Home</Link>
         </Li>
         <Li>

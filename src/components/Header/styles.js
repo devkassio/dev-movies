@@ -19,15 +19,28 @@ export const Container = styled.div`
 export const Menu = styled.ul`
   display: flex;
   gap: 50px;
-
-  li {
-    list-style: none;
-    margin-right: 10px;
-    a {
-      text-decoration: none;
-      color: #fff;
-    }
-  }
 `;
 
-export const Li = styled.li``;
+export const Li = styled.li`
+  list-style: none;
+  margin-right: 10px;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    margin-top: 3px;
+    width: ${(props) => (props.$isActive ? '100%' : '0')};
+    height: 2px;
+    background: linear-gradient(to right, #5036ac, #189b20);
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+`;
