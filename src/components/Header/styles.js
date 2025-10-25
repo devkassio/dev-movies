@@ -48,3 +48,14 @@ export const Li = styled.li`
     width: 100%;
   }
 `;
+
+export const SectionLink = styled.a`
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #ccc;
+  }
+`;

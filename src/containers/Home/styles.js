@@ -48,10 +48,8 @@ export const Info = styled.div`
 `;
 
 export const Section = styled.section`
-  min-height: 60vh;
-  padding: 40px 20px;
   scroll-margin-top: 100px; /* Ajusta o scroll para compensar o header fixo */
-  
+
   &:first-child {
     scroll-margin-top: 0;
   }

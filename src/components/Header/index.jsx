@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
-import { Container, Li, Menu } from './styles';
+import { Container, Li, Menu, SectionLink } from './styles';
 
 export default function Header() {
   const [changeBackground, setChangeBackground] = useState(false);
@@ -41,7 +41,7 @@ export default function Header() {
     if (pathname === '/') {
       return activeSection === section;
     }
-    
+
     // Para outras rotas, usar pathname
     switch (section) {
       case 'home':
@@ -60,9 +60,9 @@ export default function Header() {
     if (pathname === '/' && sectionId !== 'home') {
       const section = document.getElementById(sectionId);
       if (section) {
-        section.scrollIntoView({ 
+        section.scrollIntoView({
           behavior: 'smooth',
-          block: 'start'
+          block: 'start',
         });
       }
     }
@@ -73,38 +73,42 @@ export default function Header() {
       <img src={Logo} alt="Logo-DevMovies" />
       <Menu>
         <Li $isActive={getActiveState('home')}>
-          <Link to="/" onClick={() => pathname === '/' && window.scrollTo({top: 0, behavior: 'smooth'})}>
+          <Link
+            to="/"
+            onClick={() =>
+              pathname === '/' &&
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }
+          >
             Home
           </Link>
         </Li>
         <Li $isActive={getActiveState('movies')}>
           {pathname === '/' ? (
-            <a 
-              href="#movies" 
+            <SectionLink
+              href="#movies"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection('movies');
               }}
-              style={{ textDecoration: 'none', color: '#fff', cursor: 'pointer' }}
             >
               Filmes
-            </a>
+            </SectionLink>
           ) : (
             <Link to="/movies">Filmes</Link>
           )}
         </Li>
         <Li $isActive={getActiveState('series')}>
           {pathname === '/' ? (
-            <a 
-              href="#series" 
+            <SectionLink
+              href="#series"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection('series');
               }}
-              style={{ textDecoration: 'none', color: '#fff', cursor: 'pointer' }}
             >
               Séries
-            </a>
+            </SectionLink>
           ) : (
             <Link to="/series">Séries</Link>
           )}
