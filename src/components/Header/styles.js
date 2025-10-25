@@ -12,7 +12,8 @@ export const Container = styled.div`
   align-items: center;
   padding: 15px 20px;
 
-  background-color: ${(props) => props.$changeBackground ? '#000000' : 'transparent'};
+  background-color: ${(props) =>
+    props.$changeBackground ? '#000000' : 'transparent'};
   transition: background-color 0.7s ease-in-out;
 
   img {

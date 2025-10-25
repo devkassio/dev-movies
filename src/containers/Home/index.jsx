@@ -107,14 +107,16 @@ export default function Home() {
         {topMovies && topMovies.length > 0 && (
           <Slider info={topMovies} title="Top Filmes" />
         )}
-        {popularSeries && popularSeries.length > 0 && (
-          <Slider info={popularSeries} title="Filmes Populares" />
-        )}
       </Section>
       <Section id="series">
         {topSeries && topSeries.length > 0 && (
           <Slider info={topSeries} title="Top Séries" />
         )}
+        {popularSeries && popularSeries.length > 0 && (
+          <Slider info={popularSeries} title="Séries Populares" />
+        )}
+      </Section>
+      <Section id="artists">
         {persons && persons.length > 0 && (
           <Slider info={persons} title="Artistas Populares" />
         )}

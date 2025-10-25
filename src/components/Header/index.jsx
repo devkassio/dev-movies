@@ -19,13 +19,18 @@ export default function Header() {
 
       // Detectar seção ativa apenas na página inicial
       if (pathname === '/') {
-        const sections = ['home', 'movies', 'series'];
+        const sections = ['home', 'movies', 'series', 'artists'];
         const scrollPosition = window.scrollY + 200; // Offset para ativação antecipada
 
         for (let i = sections.length - 1; i >= 0; i--) {
           const section = document.getElementById(sections[i]);
           if (section && section.offsetTop <= scrollPosition) {
-            setActiveSection(sections[i]);
+            // Se estiver na seção 'artists', manter 'series' como ativo na navegação
+            if (sections[i] === 'artists') {
+              setActiveSection('none'); // Não destacar nenhum item do menu
+            } else {
+              setActiveSection(sections[i]);
+            }
             break;
           }
         }
@@ -50,6 +55,8 @@ export default function Header() {
         return pathname === '/movies';
       case 'series':
         return pathname === '/series';
+      case 'default':
+        return ;
       default:
         return false;
     }
