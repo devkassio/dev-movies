@@ -21,22 +21,26 @@ git config --global alias.puom 'pull origin master'
 ## 🚀 Comandos Rápidos para DevMovies
 
 ### Commit Rápido
+
 ```bash
 # Adicionar, commitar e fazer push em um comando
 git add . && git commit -m "feat: 🎬 atualizações" && git push origin master
 ```
 
 ### Verificar Status
+
 ```bash
 git st  # em vez de git status
 ```
 
 ### Push Rápido
+
 ```bash
 git pom  # em vez de git push origin master
 ```
 
 ### Pull Rápido
+
 ```bash
 git puom  # em vez de git pull origin master
 ```
@@ -47,6 +51,7 @@ git puom  # em vez de git pull origin master
 2. **`scripts/commit.ps1`** - Script PowerShell para Windows
 
 ### Como usar no Windows:
+
 ```powershell
 # Executar script PowerShell
 .\scripts\commit.ps1
@@ -56,6 +61,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
 ### Como usar no Linux/Mac:
+
 ```bash
 # Dar permissão e executar
 chmod +x scripts/commit.sh
@@ -65,11 +71,13 @@ chmod +x scripts/commit.sh
 ## 🔑 Configuração de Credenciais
 
 ### Token GitHub (Recomendado)
+
 1. Vá para GitHub → Settings → Developer settings → Personal access tokens
 2. Gere um novo token com permissões de repo
 3. Use o token como senha quando solicitar credenciais
 
 ### SSH (Alternativa)
+
 ```bash
 # Gerar chave SSH
 ssh-keygen -t ed25519 -C "kassioxis@icloud.com"
@@ -85,6 +93,7 @@ cat ~/.ssh/id_ed25519.pub
 ## 🛠️ Troubleshooting
 
 ### Problema: Credenciais
+
 ```bash
 # Limpar credenciais salvas
 git config --global --unset credential.helper
@@ -92,6 +101,7 @@ git config --global credential.helper store
 ```
 
 ### Problema: Push rejeitado
+
 ```bash
 # Pull primeiro, depois push
 git pull origin master
@@ -99,6 +109,7 @@ git push origin master
 ```
 
 ### Problema: Conflitos
+
 ```bash
 # Resolver conflitos e continuar
 git add .
@@ -109,6 +120,7 @@ git push origin master
 ## 📞 Suporte
 
 Se tiver problemas, execute:
+
 ```bash
 git status
 git log --oneline -5
