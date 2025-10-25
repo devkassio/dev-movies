@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import api from '../../services/api';
 import { Background, Container } from './styles';
 
-export default function Modal({ movieId }) {
+export default function Modal({ movieId, setShowModal }) {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function Modal({ movieId }) {
   }, [movieId]);
 
   return (
-    <Background>
+    <Background onClick={() => setShowModal(false)}>
       <Container>
         <iframe
           src={`https://www.youtube.com/embed/${movies.key}`}

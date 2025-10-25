@@ -7,6 +7,7 @@ import { Background, Container, Info, Poster } from './styles';
 import Modal from '../../components/Modal';
 
 export default function Home() {
+  const [showModal, setShowModal] = useState(false);
   const [movies, setMovies] = useState([]);
   const [topMovies, setTopMovies] = useState([]);
   const [topSeries, setTopSeries] = useState([]);
@@ -80,14 +81,14 @@ export default function Home() {
     <div>
       {movies && (
         <Background img={getImages(movies.backdrop_path)}>
-          <Modal movieId={movies.id} />
+          { showModal && <Modal movieId={movies.id} setShowModal={setShowModal} />}
           <Container>
             <Info>
               <h1>{movies.title}</h1>
               <p>{movies.overview}</p>
               <div>
                 <Button red>Assistir agora</Button>
-                <Button>Assistir o trailer</Button>
+                <Button onClick={() => setShowModal(true)}>Assistir o trailer</Button>
               </div>
             </Info>
             <Poster>
