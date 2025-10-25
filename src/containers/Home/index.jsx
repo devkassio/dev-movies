@@ -4,6 +4,7 @@ import Slider from '../../components/Slider';
 import api from '../../services/api';
 import { getImages } from '../../utils/getImages';
 import { Background, Container, Info, Poster } from './styles';
+import Modal from '../../components/Modal';
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
@@ -14,11 +15,10 @@ export default function Home() {
 
   useEffect(() => {
     async function getMovies() {
-      // Filme Principal
       try {
         const {
           data: { results },
-        } = await api.get('/movie/popular'); // API de Filmes Populares
+        } = await api.get('/movie/popular');
         setMovies(results[0]);
       } catch (error) {
         console.error('Error fetching movies:', error);
@@ -30,7 +30,7 @@ export default function Home() {
       try {
         const {
           data: { results },
-        } = await api.get('/movie/top_rated'); // API Top Filmes
+        } = await api.get('/movie/top_rated');
         setTopMovies(results);
       } catch (error) {
         console.error('Error fetching movies:', error);
@@ -42,7 +42,7 @@ export default function Home() {
       try {
         const {
           data: { results },
-        } = await api.get('/tv/top_rated'); // API Top Series
+        } = await api.get('/tv/top_rated');
         setTopSeries(results);
       } catch (error) {
         console.error('Error fetching movies:', error);
@@ -50,11 +50,10 @@ export default function Home() {
     }
 
     async function getPopularSeries() {
-      // Series Populares
       try {
         const {
           data: { results },
-        } = await api.get('/tv/popular'); // API Series Populares
+        } = await api.get('/tv/popular');
         setPopularSeries(results);
       } catch (error) {
         console.error('Error fetching movies:', error);
@@ -66,7 +65,7 @@ export default function Home() {
       try {
         const {
           data: { results },
-        } = await api.get('/person/popular'); // Personagens Populares
+        } = await api.get('/person/popular');
         setPersons(results);
       } catch (error) {
         console.error('Error fetching persons:', error);
@@ -84,6 +83,7 @@ export default function Home() {
     <div>
       {movies && (
         <Background img={getImages(movies.backdrop_path)}>
+          <Modal movieId={movies.id} />
           <Container>
             <Info>
               <h1>{movies.title}</h1>

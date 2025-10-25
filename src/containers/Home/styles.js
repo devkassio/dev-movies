@@ -16,7 +16,7 @@ export const Background = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 135dvh;
+    height: 100dvh;
     background-color: rgba(0, 0, 0, 0.5);
   }
 `;
