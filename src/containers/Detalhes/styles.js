@@ -1,4 +1,4 @@
-import styled, { keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const scale = keyframes`
   from {
@@ -43,7 +43,7 @@ export const Background = styled.div`
 
 export const Container = styled.div`
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: flex-start;
   height: 100%;
   max-width: 1500px;
@@ -65,5 +65,27 @@ export const Cover = styled.div`
     margin-left: 10px;
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
     animation: ${scale} 0.7s ease-in-out;
+  }
+`;
+
+export const Info = styled.div`
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+  z-index: 3;
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 45px;
+    color: #fff;
+  }
+
+  p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
   }
 `;

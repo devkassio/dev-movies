@@ -7,7 +7,7 @@ import {
   getMovieVideos,
 } from '../../services/getData';
 import { getImages } from '../../utils/getImages';
-import { Background, Container, Cover } from './styles';
+import { Background, Container, Cover, Info } from './styles';
 export default function Detail() {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
@@ -46,6 +46,12 @@ export default function Detail() {
             <img src={getImages(movie.poster_path)} alt={movie.title} />
           )}
         </Cover>
+        <Info>
+          <h1>{movie && movie.title}</h1>
+          <div>Gênero:</div>
+          <p>{movie && movie.overview}</p>
+          <div>Elenco:</div>
+        </Info>
       </Container>
     </>
   );
