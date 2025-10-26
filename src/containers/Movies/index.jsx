@@ -123,9 +123,6 @@ function Movies() {
               setTotalPages(data.total_pages);
               foundNewContent = true;
             } else {
-              console.log(
-                `Página ${nextPage} tem duplicatas, tentando próxima...`,
-              );
               nextPage++;
               attempts++;
             }
