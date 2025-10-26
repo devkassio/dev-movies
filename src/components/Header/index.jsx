@@ -91,34 +91,10 @@ export default function Header() {
           </Link>
         </Li>
         <Li $isActive={getActiveState('movies')}>
-          {pathname === '/' ? (
-            <SectionLink
-              href="#movies"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('movies');
-              }}
-            >
-              Filmes
-            </SectionLink>
-          ) : (
-            <Link to="/movies">Filmes</Link>
-          )}
+          <Link to="/movies">Filmes</Link>
         </Li>
         <Li $isActive={getActiveState('series')}>
-          {pathname === '/' ? (
-            <SectionLink
-              href="#series"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('series');
-              }}
-            >
-              Séries
-            </SectionLink>
-          ) : (
-            <Link to="/series">Séries</Link>
-          )}
+          <Link to="/series">Séries</Link>
         </Li>
       </Menu>
     </Container>

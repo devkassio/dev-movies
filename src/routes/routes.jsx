@@ -14,6 +14,8 @@ export default function Routers() {
         <Route path="/movies" element={<Movies />} />
         <Route path="/series" element={<Series />} />
         <Route path="/detalhe/:id" element={<Detail />} />
+        <Route path="/movie/:id" element={<Detail />} />
+        <Route path="/serie/:id" element={<Detail />} />
       </Route>
     </Routes>
   );

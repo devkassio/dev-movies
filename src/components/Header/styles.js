@@ -19,11 +19,55 @@ export const Container = styled.div`
   img {
     width: 400px;
   }
+
+  @media (max-width: 1024px) {
+    min-height: 12vh;
+    padding: 12px 15px;
+
+    img {
+      width: 300px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    min-height: 10vh;
+    padding: 10px 15px;
+    flex-direction: column;
+    gap: 10px;
+
+    img {
+      width: 250px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    min-height: 8vh;
+    padding: 8px 10px;
+
+    img {
+      width: 200px;
+    }
+  }
 `;
 
 export const Menu = styled.ul`
   display: flex;
   gap: 50px;
+
+  @media (max-width: 1024px) {
+    gap: 30px;
+  }
+
+  @media (max-width: 768px) {
+    gap: 25px;
+    margin-top: 5px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 export const Li = styled.li`
@@ -33,6 +77,9 @@ export const Li = styled.li`
   a {
     text-decoration: none;
     color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
   }
 
   &::after {
@@ -47,6 +94,50 @@ export const Li = styled.li`
 
   &:hover::after {
     width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    margin-right: 5px;
+
+    a {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+
+    a {
+      font-size: 0.95rem;
+      padding: 8px 12px;
+      border-radius: 20px;
+      background: ${(props) =>
+        props.$isActive
+          ? 'rgba(80, 54, 172, 0.3)'
+          : 'rgba(255, 255, 255, 0.1)'};
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    &:hover a {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Desativar o ::after em mobile já que usamos background no link */
+    &::after {
+      display: none;
+    }
+
+    &:hover::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    a {
+      font-size: 0.9rem;
+      padding: 6px 10px;
+    }
   }
 `;
 
