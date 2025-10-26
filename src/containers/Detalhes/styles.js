@@ -60,7 +60,7 @@ export const Cover = styled.div`
 
   img {
     border-radius: 30px;
-    width: 280px;
+    width: 270px;
     height: 100%;
     margin-left: 10px;
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
@@ -87,5 +87,38 @@ export const Info = styled.div`
     margin-top: 20px;
     margin-bottom: 20px;
     color: #fff;
+  }
+`;
+
+export const ContainerMovies = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  width: 100%;
+  margin: 40px 0 80px 0;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1500px;
+    width: 100%;
+    height: 100%;
+    margin: 20px 0;
+  }
+
+  h3 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #fff;
+  }
+
+  iframe {
+    border-radius: 30px;
+    width: 1000px;
+    height: 500px;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
   }
 `;
