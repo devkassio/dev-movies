@@ -55,13 +55,42 @@ export async function getPersons() {
   }
 }
 
-export async function getMovie(movieId) {
-      try {
-        const {
-          data: { results },
-        } = await api.get(`/movie/${movieId}/videos`);
-        return results[0];
-      } catch (error) {
-        console.error('Error fetching movies:', error);
-      }
-    }
+export async function getMovieVideos(movieId) {
+  try {
+    const {
+      data: { results },
+    } = await api.get(`/movie/${movieId}/videos`);
+    return results;
+  } catch (error) {
+    console.error('Error fetching movies:', error);
+  }
+}
+
+export async function getMovieCredits(movieId) {
+  try {
+    const { data } = await api.get(`/movie/${movieId}/credits`);
+    return data;
+  } catch (error) {
+    console.error('Error fetching movies:', error);
+  }
+}
+
+export async function getMovieSimilar(movieId) {
+  try {
+    const {
+      data: { results },
+    } = await api.get(`/movie/${movieId}/similar`);
+    return results;
+  } catch (error) {
+    console.error('Error fetching movies:', error);
+  }
+}
+
+export async function getMovieById(movieId) {
+  try {
+    const { data } = await api.get(`/movie/${movieId}`);
+    return data;
+  } catch (error) {
+    console.error('Error fetching movies:', error);
+  }
+}
