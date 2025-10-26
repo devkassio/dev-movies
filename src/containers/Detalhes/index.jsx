@@ -8,6 +8,8 @@ import {
 } from '../../services/getData';
 import { getImages } from '../../utils/getImages';
 import { Background, Container, Cover, Info } from './styles';
+import SpanGenres from '../../components/SpanGenres';
+import Credits from '../../components/Credits';
 export default function Detail() {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
@@ -48,9 +50,9 @@ export default function Detail() {
         </Cover>
         <Info>
           <h1>{movie && movie.title}</h1>
-          <div>Gênero:</div>
+          <SpanGenres genres={movie && movie.genres} />
           <p>{movie && movie.overview}</p>
-          <div>Elenco:</div>
+          <Credits movieCredits={movieCredits} />
         </Info>
       </Container>
     </>

@@ -68,8 +68,8 @@ export async function getMovieVideos(movieId) {
 
 export async function getMovieCredits(movieId) {
   try {
-    const { data } = await api.get(`/movie/${movieId}/credits`);
-    return data;
+    const { data: { cast } } = await api.get(`/movie/${movieId}/credits`);
+    return cast;
   } catch (error) {
     console.error('Error fetching movies:', error);
   }
