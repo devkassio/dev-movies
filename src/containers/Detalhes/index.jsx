@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {
   getMovieById,
@@ -6,10 +6,11 @@ import {
   getMovieSimilar,
   getMovieVideos,
 } from '../../services/getData';
-import { Container } from './styles';
+import { getImages } from '../../utils/getImages';
+import { Background, Container, Cover } from './styles';
 export default function Detail() {
   const { id } = useParams();
-  const [movies, setMovies] = useState([]);
+  const [movie, setMovie] = useState(null);
   const [movieVideos, setMovieVideos] = useState([]);
   const [movieCredits, setMovieCredits] = useState([]);
   const [movieSimilar, setMovieSimilar] = useState([]);
@@ -22,21 +23,30 @@ export default function Detail() {
         getMovieSimilar(id),
         getMovieById(id),
       ])
-        .then(([movies, credits, videos, similar]) => {
-          setMovies(movies);
-          setMovieCredits(credits);
+        .then(([videos, credits, similar, movieData]) => {
           setMovieVideos(videos);
+          setMovieCredits(credits);
           setMovieSimilar(similar);
+          setMovie(movieData);
         })
         .catch((error) => console.error(error));
     }
 
     getAllData();
-  }, []);
+  }, [id]);
 
   return (
-    <Container>
-      <div>Detalhes</div>
-    </Container>
+    <>
+      {movie && movie.backdrop_path && (
+        <Background image={getImages(movie.backdrop_path)} />
+      )}
+      <Container>
+        <Cover>
+          {movie && movie.poster_path && (
+            <img src={getImages(movie.poster_path)} alt={movie.title} />
+          )}
+        </Cover>
+      </Container>
+    </>
   );
 }
