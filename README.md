@@ -1,553 +1,367 @@
-# 🎬 DevMovies - Plataforma Estilo Netflix# 🎬 DevMovies
+# 🎬 DevMovies
 
-<div align="center">Uma aplicação moderna de catálogo de filmes e séries construída com React, que utiliza a API do The Movie Database (TMDb) para fornecer informações atualizadas sobre filmes populares, top filmes e séries mais bem avaliadas.
+<div align="center">
+  <img width="1380" height="793" alt="Macbook-Air-localhost (1)" src="https://github.com/user-attachments/assets/01132d03-0701-4da5-97b0-7b8e7ace2fa7" width="800"/>
 
-![DevMovies Banner](https://img.shields.io/badge/DevMovies-Streaming%20Platform-FF6B6B?style=for-the-badge&logo=react&logoColor=white)##
-📋 Índice
+    
+  <br><br>
+  <img alt="React" src="https://img.shields.io/badge/React-19.1.1-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-7.1.7-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img alt="Styled Components" src="https://img.shields.io/badge/Styled_Components-6.1.19-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
+  <img alt="TMDb" src="https://img.shields.io/badge/TMDb-API-01B4E4?style=for-the-badge&logo=themoviedatabase&logoColor=white" />
+</div>
 
-**Uma experiência cinematográfica completa inspirada no Netflix**-
-[Sobre o Projeto](#sobre-o-projeto)
+<div align="center">
+  <strong>Uma aplicação moderna de catálogo de filmes e séries construída com React, inspirada no Netflix, utilizando a API do The Movie Database (TMDb) para dados em tempo real.</strong>
+  <br><br>
+  <a href="https://dev-movies.vercel.app">🚀 Demo Live</a> • 
+  <a href="#funcionalidades">📖 Funcionalidades</a> • 
+  <a href="https://github.com/devkassio/dev-movies/issues">🐛 Reportar Bug</a> • 
+  <a href="https://github.com/devkassio/dev-movies/issues">✨ Solicitar Feature</a>
+</div>
 
+## 📋 Índice
+
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-
-[![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=flat-square&logo=react)](https://reactjs.org/)-
-[Funcionalidades](#funcionalidades)
-
-[![Vite](https://img.shields.io/badge/Vite-7.1.7-646CFF?style=flat-square&logo=vite)](https://vitejs.dev/)-
-[Estrutura do Projeto](#estrutura-do-projeto)
-
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)-
-[Pré-requisitos](#pré-requisitos)
-
-[![TMDb](https://img.shields.io/badge/TMDb-API-01B4E4?style=flat-square&logo=themoviedatabase)](https://www.themoviedb.org/)-
-[Instalação](#instalação)
-
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação](#instalação)
 - [Como Usar](#como-usar)
-
-[🚀 Demo Live](#) • [📖 Documentação](#funcionalidades) •
-[🐛 Report Bug](https://github.com/devkassio/dev-movies/issues) •
-[✨ Request Feature](https://github.com/devkassio/dev-movies/issues)-
-[Scripts Disponíveis](#scripts-disponíveis)
-
+- [Scripts Disponíveis](#scripts-disponíveis)
 - [API](#api)
-
-</div>- [Componentes](#componentes)
-
-- [Estrutura de Pastas](#estrutura-de-pastas)
-
-## 🌟 Sobre o Projeto- [Contribuição](#contribuição)
-
+- [Componentes](#componentes)
+- [Estilos](#estilos)
+- [Design Responsivo](#design-responsivo)
+- [Roadmap](#roadmap)
+- [Contribuição](#contribuição)
 - [Licença](#licença)
+- [Autor](#autor)
+- [Agradecimentos](#agradecimentos)
 
-**DevMovies** é uma plataforma de streaming moderna desenvolvida com React que
-oferece uma experiência visual e funcional similar ao Netflix. Com design
-responsivo mobile-first, a aplicação permite explorar um vasto catálogo de
-filmes e séries através de dados em tempo real da API do The Movie Database
-(TMDb).- [Autor](#autor)
+## 🌟 Sobre o Projeto
 
-### 🎯 Destaques do Projeto## 🎯 Sobre o Projeto
+O **DevMovies** é uma aplicação web responsiva que oferece uma experiência cinematográfica inspirada no Netflix. Com design mobile-first e interface intuitiva, os usuários podem explorar um vasto catálogo de filmes e séries, consumindo dados em tempo real da API do TMDb. Destaques incluem seções hero com filmes em destaque, carrosséis interativos e páginas dedicadas com filtros avançados.
 
-- 🎨 **Interface Netflix-like** com design profissional e modernoO **DevMovies**
-  é uma aplicação web responsiva que permite aos usuários navegar por um
-  catálogo abrangente de filmes e séries. A aplicação oferece uma interface
-  moderna e intuitiva, apresentando filmes populares em destaque, carrosséis de
-  filmes e séries mais bem avaliados, tudo isso consumindo dados em tempo real
-  da API do TMDb.
+### ✨ Principais Características
 
-- 📱 **Totalmente Responsivo** - Otimizado para mobile, tablet e desktop
+- 🔥 **Filme em Destaque**: Seção hero com o filme mais popular.
+- 🎪 **Carrosséis Interativos**: Navegação fluida por listas de top filmes e séries.
+- 📱 **Design Responsivo**: Adaptado para mobile, tablet e desktop.
+- ⚡ **Performance Otimizada**: Construído com Vite para carregamento rápido.
+- 🎨 **Styled Components**: Estilização moderna e componentizada.
+- 🌐 **SPA**: Single Page Application com roteamento via React Router.
+- 🔍 **Filtros e Paginação**: Busca por gênero, popularidade e carregamento progressivo.
+- 🚀 **Sistema Anti-duplicação**: Conteúdo único e organizado.
 
-- ⚡ **Performance Otimizada** - Carregamento rápido e navegação fluida### ✨
-  Principais Características
-
-- 🔍 **Páginas Dedicadas** - Filmes e Séries com filtros avançados
-
-- 🎪 **Carrosséis Interativos** - Navegação suave estilo streaming- 🔥 **Filme
-  em Destaque**: Exibe o filme mais popular em uma seção hero
-
-- 🎬 **Detalhes Completos** - Informações detalhadas, elenco e trailers- 🎪
-  **Carrosséis Interativos**: Navegação fluida por listas de filmes e séries
-
-- 🚀 **Sistema Anti-duplicação** - Conteúdo único e organizado- 📱 **Design
-  Responsivo**: Interface adaptada para todos os dispositivos
-
-- ⚡ **Performance Otimizada**: Construído com Vite para desenvolvimento rápido
-
-## ✨ Funcionalidades- 🎨 **Styled Components**: Estilização moderna e componentizada
-
-- 🌐 **SPA**: Single Page Application com roteamento via React Router
-
-### 🏠 **Página Home**
-
-- **Hero Section** com filme em destaque## 🚀 Tecnologias Utilizadas
-
-- **Múltiplos Sliders** - Top Filmes, Top Séries, Populares
-
-- **Cards Responsivos** - Tamanhos otimizados estilo Netflix### Frontend
-
-- **Navegação Fluida** - Scroll horizontal intuitivo- **React 19.1.1** -
-  Biblioteca JavaScript para construção de interfaces
-
-- **React Router DOM 7.9.4** - Roteamento para Single Page Applications
-
-### 🎬 **Página de Filmes**- **Styled Components 6.1.19** - CSS-in-JS para estilização de componentes
-
-- **Catálogo Completo** com grid responsivo- **Vite 7.1.7** - Build tool e
-  servidor de desenvolvimento
-
-- **Filtros por Gênero** - Ação, Drama, Comédia, etc.
-
-- **Paginação Inteligente** - Carregamento progressivo### UI/UX
-
-- **Busca Avançada** - Encontre filmes facilmente- **Swiper 12.0.3** - Carrossel
-  e slides responsivos
-
-- **Google Fonts** - Tipografia (Montserrat e Poppins)
-
-### 📺 **Página de Séries**
-
-- **Catálogo Dedicado** para séries de TV### API e Dados
-
-- **Filtros Especializados** - Por gênero e popularidade- **Axios 1.12.2** -
-  Cliente HTTP para requisições à API
-
-- **Informações Detalhadas** - Temporadas e episódios- **The Movie Database
-  API** - Fonte de dados de filmes e séries
-
-- **Navegação Otimizada** - Layout específico para séries
-
-### Desenvolvimento
-
-### 🎭 **Página de Detalhes**- **ESLint** - Linting e padrões de código
-
-- **Informações Completas** - Sinopse, avaliação, duração- **Prettier** -
-  Formatação automática de código
-
-- **Elenco Principal** - Fotos e nomes dos atores- **JavaScript (ES6+)** -
-  Linguagem principal
-
-- **Trailers e Vídeos** - Modal integrado para visualização
-
-- **Conteúdo Similar** - Recomendações personalizadas## 🎯 Funcionalidades
-
-- **Design Responsivo** - Adaptado para todos os dispositivos
+## 🎯 Funcionalidades
 
 ### Páginas Principais
 
-### 🎨 **Sistema de Design**- **🏠 Home**: Página inicial com filme em destaque e carrosséis
+- **🏠 Home**: Página inicial com filme em destaque, carrosséis de top filmes/séries e populares.
+- **🎬 Filmes**: Catálogo completo com grid responsivo, filtros por gênero (Ação, Drama, Comédia etc.) e paginação inteligente.
+- **📺 Séries**: Catálogo dedicado para séries de TV, com filtros por gênero/popularidade e detalhes de temporadas/episódios.
+- **🎭 Detalhes**: Página individual com sinopse, avaliação, duração, elenco, trailers (em modal) e recomendações similares.
 
-- **Componentes Reutilizáveis** - Arquitetura modular- **🎬 Filmes**: Catálogo
-  dedicado de filmes
+### Componentes Interativos
 
-- **Styled Components** - CSS-in-JS profissional- **📺 Séries**: Catálogo
-  dedicado de séries de TV
+- **Header**: Navegação principal com logo e links.
+- **Hero Section**: Apresentação do filme popular com informações básicas.
+- **Carrossel de Filmes/Séries**: Sliders horizontais com navegação suave.
+- **Cards Responsivos**: Exibição de itens com tamanhos otimizados (estilo Netflix).
+- **Modal**: Janelas para trailers e detalhes expandidos.
+- **Botões e SpanGenres**: Componentes reutilizáveis para ações e tags de gêneros.
 
-- **Animações Suaves** - Transições e hover effects
+### Recursos Técnicos
 
-- **Tipografia Moderna** - Fontes Google Fonts otimizadas### Componentes
-  Interativos
+- **Lazy Loading**: Otimização de imagens para melhor performance.
+- **Error Handling**: Tratamento de erros em requisições API.
+- **Requisições Concorrentes**: Uso de `Promise.all` para carregamento otimizado.
+- **SEO Friendly**: Estrutura semântica otimizada para mecanismos de busca.
 
-- **Header**: Navegação principal com logo
+## 🚀 Tecnologias Utilizadas
 
-## 🛠️ Tecnologias & Ferramentas- **Hero Section**: Filme popular em destaque com informações
+### Frontend Core
 
-- **Carrossel de Filmes**: Top filmes avaliados
+| Tecnologia | Versão | Descrição |
+|------------|--------|-----------|
+| [React](https://reactjs.org/) | 19.1.1 | Biblioteca JavaScript para construção de interfaces |
+| [React Router DOM](https://reactrouter.com/) | 7.9.4 | Roteamento para Single Page Applications |
+| [Styled Components](https://styled-components.com/) | 6.1.19 | CSS-in-JS para estilização de componentes |
+| [Vite](https://vitejs.dev/) | 7.1.7 | Build tool e servidor de desenvolvimento |
 
-### **Frontend Core**- **Carrossel de Séries**: Top séries avaliadas
+### UI/UX
 
-````json- **Cards**: Apresentação individual de filmes/séries
+| Tecnologia | Versão | Descrição |
+|------------|--------|-----------|
+| [Swiper](https://swiperjs.com/) | 12.0.3 | Carrossel e slides responsivos |
+| [Google Fonts](https://fonts.google.com/) | - | Tipografia (Montserrat e Poppins) |
+| CSS Grid & Flexbox | - | Layouts modernos |
 
-{- **Botões**: Componentes de ação reutilizáveis
+### API e Dados
 
-  "React": "19.1.1",- **Modal**: Janelas modais para informações detalhadas
+| Tecnologia | Versão | Descrição |
+|------------|--------|-----------|
+| [Axios](https://axios-http.com/) | 1.12.2 | Cliente HTTP para requisições à API |
+| [The Movie Database API](https://www.themoviedb.org/) | - | Fonte de dados de filmes e séries |
 
-  "React Router": "7.9.4",
+### Desenvolvimento
 
-  "Styled Components": "6.1.19",### Recursos Técnicos
+| Ferramenta | Descrição |
+|------------|-----------|
+| ESLint | Linting e padrões de código |
+| Prettier | Formatação automática de código |
+| JavaScript (ES6+) | Linguagem principal |
 
-  "Vite": "7.1.7"- **Lazy Loading**: Carregamento otimizado de imagens
+## 📁 Estrutura do Projeto
 
-}- **Error Handling**: Tratamento de erros nas requisições
-
-```- **Responsive Design**: Adaptação para mobile, tablet e desktop
-
-- **SEO Friendly**: Estrutura otimizada para mecanismos de busca
-
-### **UI/UX Libraries**
-
-- **Swiper** `12.0.3` - Carrosséis e slides avançados## 📁 Estrutura do Projeto
-
-- **Google Fonts** - Montserrat & Poppins
-
-- **CSS Grid & Flexbox** - Layouts modernos```
-
+```
 dev-movies/
-
-### **API & Dados**│
-
-- **Axios** `1.12.2` - Cliente HTTP otimizado├── public/                 # Arquivos públicos estáticos
-
-- **TMDb API** - The Movie Database│
-
-- **Promise.all** - Requisições concorrentes├── src/
-
-│   ├── assets/            # Imagens, logos e recursos estáticos
-
-### **Performance & SEO**│   │
-
-- **Lazy Loading** - Carregamento otimizado│   ├── components/        # Componentes reutilizáveis
-
-- **Error Boundaries** - Tratamento de erros│   │   ├── Button/        # Componente de botão
-
-- **Mobile-First** - Design responsivo│   │   ├── Card/          # Card de filme/série
-
-- **Bundle Optimization** - Build otimizada com Vite│   │   ├── Header/        # Cabeçalho da aplicação
-
-│   │   ├── Modal/         # Componente modal
-
-## 🚀 Instalação e Configuração│   │   └── Slider/        # Carrossel de itens
-
+│
+├── public/                 # Arquivos públicos estáticos
+│
+├── src/
+│   ├── assets/             # Imagens, logos e recursos estáticos
+│   ├── components/         # Componentes reutilizáveis
+│   │   ├── Button/         # Componente de botão
+│   │   ├── Card/           # Card de filme/série
+│   │   ├── Credits/        # Elenco e créditos
+│   │   ├── Header/         # Cabeçalho da aplicação
+│   │   ├── Modal/          # Componente modal
+│   │   ├── Slider/         # Carrossel de itens
+│   │   └── SpanGenres/     # Tags de gêneros
 │   │
-
-### **Pré-requisitos**│   ├── containers/        # Páginas/Containers principais
-
-- Node.js 16+ │   │   ├── Home/          # Página inicial
-
-- npm ou yarn│   │   ├── Movies/        # Página de filmes
-
-- Git│   │   └── Series/        # Página de séries
-
+│   ├── containers/         # Páginas/Containers principais
+│   │   ├── Home/           # Página inicial
+│   │   ├── Movies/         # Página de filmes
+│   │   ├── Series/         # Página de séries
+│   │   └── Detalhes/       # Página de detalhes
 │   │
-
-### **Clone e Execute**│   ├── layout/            # Layouts da aplicação
-
+│   ├── layout/             # Layouts da aplicação
 │   │   └── DefaultLayout.jsx
-
-```bash│   │
-
-# Clone o repositório│   ├── routes/            # Configuração de rotas
-
-git clone https://github.com/devkassio/dev-movies.git│   │   └── routes.jsx
-
 │   │
-
-# Entre no diretório│   ├── services/          # Serviços e APIs
-
-cd dev-movies│   │   └── api.js         # Configuração do Axios/TMDb
-
+│   ├── routes/             # Configuração de rotas
+│   │   └── routes.jsx
 │   │
-
-# Instale as dependências│   ├── styles/            # Estilos globais
-
-npm install│   │   └── globalStyles.js
-
+│   ├── services/           # Serviços e APIs
+│   │   └── api.js          # Configuração do Axios/TMDb
 │   │
-
-# Execute em modo desenvolvimento│   ├── utils/             # Funções utilitárias
-
-npm run dev│   │   └── getImages.js   # Helper para URLs de imagens
-
+│   ├── styles/             # Estilos globais
+│   │   └── globalStyles.js
 │   │
+│   ├── utils/              # Funções utilitárias
+│   │   └── getImages.js    # Helper para URLs de imagens
+│   │
+│   └── main.jsx            # Ponto de entrada da aplicação
+│
+├── index.html              # Template HTML principal
+├── package.json            # Dependências e scripts
+├── vite.config.js          # Configuração do Vite
+└── README.md               # Documentação do projeto
+```
 
-# Acesse: http://localhost:5173│   └── main.jsx           # Ponto de entrada da aplicação
+## 📋 Pré-requisitos
 
-```│
+Antes de começar, você precisa ter instalado em sua máquina:
 
-├── index.html             # Template HTML principal
-
-### **Scripts Disponíveis**├── package.json           # Dependências e scripts
-
-├── vite.config.js         # Configuração do Vite
-
-```bash└── README.md              # Documentação do projeto
-
-npm run dev      # Servidor de desenvolvimento```
-
-npm run build    # Build de produção
-
-npm run preview  # Preview da build## 📋 Pré-requisitos
-
-npm run lint     # Verificação de código
-
-```Antes de começar, você precisa ter instalado em sua máquina:
-
-
-
-## 📱 Design Responsivo- **Node.js** (versão 16 ou superior)
-
+- **Node.js** (versão 16 ou superior)
 - **npm** ou **yarn**
+- **Git**
 
-### **Breakpoints Otimizados**- **Git**
+## 🛠️ Instalação
 
-- **Mobile**: 320px - 480px (Cards 2.2x)
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/devkassio/dev-movies.git
+   ```
 
-- **Tablet**: 481px - 768px (Cards 3.5x)## � Instalação
+2. **Navegue até o diretório do projeto**
+   ```bash
+   cd dev-movies
+   ```
 
-- **Desktop**: 769px - 1024px (Cards 4.5x)
+3. **Instale as dependências**
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
 
-- **Large**: 1025px+ (Cards 5.5x)1. **Clone o repositório**
+4. **Configure a API do TMDb** (Opcional)
+   - O projeto já vem com uma chave de API configurada.
+   - Para usar sua própria chave, edite o arquivo `src/services/api.js`.
+   - Obtenha sua chave em: [The Movie Database API](https://www.themoviedb.org/settings/api)
 
+## 🚀 Como Usar
+
+### Desenvolvimento
 ```bash
+npm run dev
+# ou
+yarn dev
+```
 
-### **Features Mobile**git clone https://github.com/devkassio/dev-movies.git
-
-- 🔄 **Touch Navigation** - Swipe e scroll otimizados```
-
-- 📏 **Card Sizing** - Tamanhos estilo Netflix mobile
-
-- 🎯 **Touch Targets** - Botões 44px+ para acessibilidade2. **Navegue até o diretório do projeto**
-
-- ⚡ **Performance** - Animações otimizadas para mobile```bash
-
-cd dev-movies
-
-## 🎨 Arquitetura do Projeto```
-
-
-
-```3. **Instale as dependências**
-
-src/```bash
-
-├── 🧩 components/          # Componentes reutilizáveisnpm install
-
-│   ├── Button/            # Botões estilizados# ou
-
-│   ├── Card/              # Cards de filme/sérieyarn install
-
-│   ├── Credits/           # Elenco e créditos```
-
-│   ├── Header/            # Navegação principal
-
-│   ├── Modal/             # Janelas modais4. **Configure a API do TMDb** (Opcional)
-
-│   ├── Slider/            # Carrosséis   - O projeto já vem com uma chave de API configurada
-
-│   └── SpanGenres/        # Tags de gêneros   - Para usar sua própria chave, edite o arquivo `src/services/api.js`
-
-│   - Obtenha sua chave em: [The Movie Database API](https://www.themoviedb.org/settings/api)
-
-├── 📄 containers/          # Páginas principais
-
-│   ├── Home/              # Página inicial## 🚀 Como Usar
-
-│   ├── Movies/            # Catálogo de filmes
-
-│   ├── Series/            # Catálogo de séries### Desenvolvimento
-
-│   └── Detalhes/          # Página de detalhes
-
-│```bash
-
-├── 🛣️ routes/              # Sistema de rotasnpm run dev
-
-├── 🌐 services/           # APIs e serviços# ou
-
-├── 🎨 styles/             # Estilos globaisyarn dev
-
-└── 🔧 utils/              # Funções utilitárias```
-
-````
-
-A aplicação estará disponível em `http://localhost:5173`
-
-## 🔧 Funcionalidades Técnicas
+A aplicação estará disponível em `http://localhost:5173`.
 
 ### Build de Produção
+```bash
+npm run build
+# ou
+yarn build
+```
 
-### **Sistema Anti-duplicação**
+### Preview da Build
+```bash
+npm run preview
+# ou
+yarn preview
+```
 
-`javascript`bash
+## 📜 Scripts Disponíveis
 
-// Remove duplicatas usando Set()npm run build
+| Script | Descrição |
+|--------|-----------|
+| `npm run dev` | Inicia o servidor de desenvolvimento |
+| `npm run build` | Gera a build de produção |
+| `npm run preview` | Visualiza a build de produção |
+| `npm run lint` | Executa o linter ESLint |
+| `npm run format` | Formata o código com Prettier |
 
-const uniqueMovies = [...new Set(movies.map(movie => movie.id))]# ou
+## 🌐 API
 
-.map(id => movies.find(movie => movie.id === id));yarn build
+O projeto utiliza a **The Movie Database (TMDb) API** para obter dados de filmes e séries.
 
-````
-
-
-
-### **Carregamento Otimizado**### Preview da Build
-
-```javascript
-
-// Requisições concorrentes com Promise.all```bash
-
-const [movies, series, credits] = await Promise.all([npm run preview
-
-  getMovies(),# ou
-
-  getSeries(), yarn preview
-
-  getCredits()```
-
-]);
-
-```## 📜 Scripts Disponíveis
-
-
-
-### **Responsive Slider Config**- **`npm run dev`** - Inicia o servidor de desenvolvimento
-
-```javascript- **`npm run build`** - Cria a build de produção
-
-// Configuração responsiva do Swiper- **`npm run preview`** - Visualiza a build de produção
-
-breakpoints: {- **`npm run lint`** - Executa o linter ESLint
-
-  320: { slidesPerView: 2.2 },- **`npm run format`** - Formata o código com Prettier
-
-  768: { slidesPerView: 3.5 },
-
-  1024: { slidesPerView: 4.5 }## 🌐 API
-
-}
-
-```O projeto utiliza a **The Movie Database (TMDb) API** para obter dados de filmes e séries:
-
-
-
-## 🎯 Roadmap e Futuras Implementações### Endpoints Utilizados:
+### Endpoints Utilizados
 
 - `GET /movie/popular` - Filmes populares
+- `GET /movie/top_rated` - Filmes mais bem avaliados
+- `GET /tv/top_rated` - Séries mais bem avaliadas
 
-- [ ] 🔍 **Sistema de Busca** - Pesquisa global avançada- `GET /movie/top_rated` - Filmes mais bem avaliados
+### Configuração da API
 
-- [ ] ❤️ **Lista de Favoritos** - Persistência local- `GET /tv/top_rated` - Séries mais bem avaliadas
-
-- [ ] 👤 **Sistema de Usuários** - Login e perfis
-
-- [ ] 🎬 **Player Integrado** - Reprodução de trailers### Configuração da API:
-
-- [ ] 🌍 **i18n** - Suporte multi-idiomas```javascript
-
-- [ ] 📊 **Analytics** - Métricas de usoconst api = axios.create({
-
-- [ ] 🔔 **Notificações** - Lançamentos e atualizações  baseURL: 'https://api.themoviedb.org/3/',
-
-- [ ] 📱 **PWA** - Progressive Web App  params: {
-
+```javascript
+const api = axios.create({
+  baseURL: 'https://api.themoviedb.org/3/',
+  params: {
     api_key: 'sua-chave-api',
-
-## 🤝 Contribuindo    language: 'pt-BR',
-
+    language: 'pt-BR',
     page: 1,
-
-Contribuições são muito bem-vindas!   },
-
+  },
 });
+```
 
-### **Como Contribuir**```
+### Funcionalidades Técnicas
+
+#### Sistema Anti-duplicação
+```javascript
+// Remove duplicatas usando Set()
+const uniqueMovies = [...new Set(movies.map(movie => movie.id))]
+  .map(id => movies.find(movie => movie.id === id));
+```
+
+#### Carregamento Otimizado
+```javascript
+// Requisições concorrentes com Promise.all
+const [movies, series, credits] = await Promise.all([
+  getMovies(),
+  getSeries(),
+  getCredits(),
+]);
+```
+
+#### Configuração Responsiva do Swiper
+```javascript
+// Configuração responsiva do Swiper
+breakpoints: {
+  320: { slidesPerView: 2.2 },
+  768: { slidesPerView: 3.5 },
+  1024: { slidesPerView: 4.5 },
+}
+```
+
+## 🧩 Componentes
+
+- **Button**: Componente de botão reutilizável com estilos customizados.
+- **Card**: Exibe informações de filmes/séries em formato de card.
+- **Header**: Cabeçalho da aplicação com logo e navegação.
+- **Modal**: Componente modal para exibir informações detalhadas.
+- **Slider**: Carrossel horizontal para navegação entre itens.
+- **Credits**: Exibição de elenco e créditos.
+- **SpanGenres**: Tags de gêneros.
+
+## 🎨 Estilos
+
+O projeto utiliza **Styled Components** para estilização:
+
+- 🎨 Design moderno e responsivo
+- 🌙 Paleta de cores elegante
+- 📱 Mobile-first approach
+- ⚡ Performance otimizada
+- 🔧 Componentes reutilizáveis
+
+### Fontes Utilizadas
+
+- **Montserrat**: Títulos e destaques
+- **Poppins**: Texto geral
+
+## 📱 Design Responsivo
+
+### Breakpoints Otimizados
+
+- **Mobile**: 320px - 480px (Cards 2.2x)
+- **Tablet**: 481px - 768px (Cards 3.5x)
+- **Desktop**: 769px - 1024px (Cards 4.5x)
+- **Large**: 1025px+ (Cards 5.5x)
+
+### Features Mobile
+
+- 🔄 **Touch Navigation**: Swipe e scroll otimizados
+- 📏 **Card Sizing**: Tamanhos estilo Netflix mobile
+- 🎯 **Touch Targets**: Botões 44px+ para acessibilidade
+- ⚡ **Performance**: Animações otimizadas para mobile
+
+## 🎯 Roadmap
+
+- [ ] 🔍 **Sistema de Busca**: Pesquisa global avançada
+- [ ] ❤️ **Lista de Favoritos**: Persistência local
+- [ ] 👤 **Sistema de Usuários**: Login e perfis
+- [ ] 🎬 **Player Integrado**: Reprodução de trailers
+- [ ] 🌍 **i18n**: Suporte multi-idiomas
+- [ ] 📊 **Analytics**: Métricas de uso
+- [ ] 🔔 **Notificações**: Lançamentos e atualizações
+- [ ] 📱 **PWA**: Progressive Web App
+
+## 🤝 Contribuição
+
+Contribuições são sempre bem-vindas! Para contribuir:
 
 1. **Fork** o projeto
-
-2. **Branch** sua feature (`git checkout -b feature/nova-feature`)## 🧩 Componentes
-
-3. **Commit** suas mudanças (`git commit -m 'feat: adiciona nova feature'`)
-
-4. **Push** para a branch (`git push origin feature/nova-feature`)### Button
-
-5. **Pull Request** com descrição detalhadaComponente de botão reutilizável com estilos customizados.
-
-
-
-### **Padrões do Projeto**### Card
-
-- ✅ **ESLint + Prettier** - Formatação automáticaExibe informações de filmes/séries em formato de card.
-
-- 📝 **Conventional Commits** - Padrão de commits
-
-- 🧪 **Testes** - Para novas funcionalidades### Header
-
-- 📖 **Documentação** - Componentes e funçõesCabeçalho da aplicação com logo e navegação.
-
-
-
-## 📄 Licença### Modal
-
-Componente modal para exibir informações detalhadas.
-
-Este projeto está sob licença **MIT**. Consulte [LICENSE](LICENSE) para mais informações.
-
-### Slider
-
-## 👨‍💻 AutorCarrossel horizontal para navegação entre itens.
-
-
-
-<div align="center">## 🎨 Estilos
-
-
-
-**Kassio** - *Full Stack Developer*O projeto utiliza **Styled Components** para estilização:
-
-
-
-[![GitHub](https://img.shields.io/badge/GitHub-devkassio-181717?style=flat-square&logo=github)](https://github.com/devkassio)- 🎨 Design moderno e responsivo
-
-[![Email](https://img.shields.io/badge/Email-kassioxis%40icloud.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:kassioxis@icloud.com)- 🌙 Paleta de cores elegante
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/kassio-dev)- 📱 Mobile-first approach
-
-- ⚡ Performance otimizada
-
-</div>- 🔧 Componentes reutilizáveis
-
-
-
-## 🙏 Agradecimentos### Fontes Utilizadas:
-
-- **Montserrat** - Títulos e destaques
-
-- 🎬 **[TMDb](https://www.themoviedb.org/)** - API gratuita de filmes e séries- **Poppins** - Texto geral
-
-- ⚛️ **[React Team](https://reactjs.org/)** - Biblioteca incrível
-
-- ⚡ **[Vite](https://vitejs.dev/)** - Ferramenta de build moderna## 🤝 Contribuição
-
-- 💅 **[Styled Components](https://styled-components.com/)** - CSS-in-JS elegante
-
-- 🎪 **[Swiper](https://swiperjs.com/)** - Carrosséis responsivosContribuições são sempre bem-vindas! Para contribuir:
-
-
-
----1. **Fork** o projeto
-
 2. Crie uma **branch** para sua feature (`git checkout -b feature/AmazingFeature`)
-
-<div align="center">3. **Commit** suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-
+3. **Commit** suas mudanças (`git commit -m 'Add some AmazingFeature'`)
 4. **Push** para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um **Pull Request**
 
-**⭐ Gostou do projeto? Deixe uma estrela!**5. Abra um **Pull Request**
-
-
-
-*Desenvolvido com ❤️ e muito ☕ por Kassio*### Padrões de Código
+### Padrões de Código
 
 - Use ESLint e Prettier
-
-![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red?style=flat-square)- Siga os padrões de commit convencionais
-
-![Powered by Coffee](https://img.shields.io/badge/Powered%20by-☕-brown?style=flat-square)- Documente novas funcionalidades
-
+- Siga os padrões de commit convencionais
+- Documente novas funcionalidades
 - Adicione testes quando necessário
 
-</div>
-## � Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## 👨‍� Autor
+## 👨‍💻 Autor
 
 **Kassio** - *Desenvolvedor Full Stack*
 
 - GitHub: [@devkassio](https://github.com/devkassio)
 - Email: kassioxis@icloud.com
-- LinkedIn: [Seu LinkedIn](https://linkedin.com/in/seu-perfil)
+- LinkedIn: [Kássio Barros](https://linkedin.com/in/kassiobarros)
 
----
+<div align="center">
+  <img alt="Made with Love" src="https://img.shields.io/badge/Made%20with-❤️-red?style=flat-square" />
+  <img alt="Powered by Coffee" src="https://img.shields.io/badge/Powered%20by-☕-brown?style=flat-square" />
+</div>
 
 ## 🙏 Agradecimentos
 
@@ -555,12 +369,12 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 - [React](https://reactjs.org/) pela excelente biblioteca
 - [Vite](https://vitejs.dev/) pela ferramenta de build incrível
 - [Styled Components](https://styled-components.com/) pela solução de CSS-in-JS
+- [Swiper](https://swiperjs.com/) pelos carrosséis responsivos
 
 ---
 
-⭐️ Se este projeto te ajudou, considere dar uma estrela no repositório!
+<div align="center">
 
----
+**⭐ Se este projeto te ajudou, considere dar uma estrela no repositório!**
 
-*Feito com ❤️ e muito ☕ por [Kassio]*
-````
+</div>
