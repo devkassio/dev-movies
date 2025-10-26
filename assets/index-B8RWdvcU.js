@@ -2819,4 +2819,4 @@ to {
          color: #ffffff;
          overflow-x: hidden;
     }
-`;Q1.createRoot(document.getElementById("root")).render(z.jsxs(M.StrictMode,{children:[z.jsx(ub,{children:z.jsx(m5,{})}),z.jsx(g5,{})]}));
+`;Q1.createRoot(document.getElementById("root")).render(z.jsxs(M.StrictMode,{children:[z.jsx(ub,{basename:"/dev-movies",children:z.jsx(m5,{})}),z.jsx(g5,{})]}));
