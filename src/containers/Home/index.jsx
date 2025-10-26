@@ -3,7 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../../components/Button';
 import Modal from '../../components/Modal';
 import Slider from '../../components/Slider';
-import api from '../../services/api';
+import {
+  getMovies,
+  getPersons,
+  getPopularSeries,
+  getTopMovies,
+  getTopSeries,
+} from '../../services/getData';
 import { getImages } from '../../utils/getImages';
 import { Background, Container, Info, Poster, Section } from './styles';
 
@@ -18,66 +24,15 @@ export default function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    async function getMovies() {
-      try {
-        const {
-          data: { results },
-        } = await api.get('/movie/popular');
-        setMovies(results[0]);
-      } catch (error) {
-        console.error('Error fetching movies:', error);
-      }
+    async function getAllData() {
+      setMovies(await getMovies());
+      setTopMovies(await getTopMovies());
+      setTopSeries(await getTopSeries());
+      setPopularSeries(await getPopularSeries());
+      setPersons(await getPersons());
     }
 
-    async function getTopMovies() {
-      try {
-        const {
-          data: { results },
-        } = await api.get('/movie/top_rated');
-        setTopMovies(results);
-      } catch (error) {
-        console.error('Error fetching movies:', error);
-      }
-    }
-
-    async function getTopSeries() {
-      try {
-        const {
-          data: { results },
-        } = await api.get('/tv/top_rated');
-        setTopSeries(results);
-      } catch (error) {
-        console.error('Error fetching movies:', error);
-      }
-    }
-
-    async function getPopularSeries() {
-      try {
-        const {
-          data: { results },
-        } = await api.get('/tv/popular');
-        setPopularSeries(results);
-      } catch (error) {
-        console.error('Error fetching movies:', error);
-      }
-    }
-
-    async function getPersons() {
-      try {
-        const {
-          data: { results },
-        } = await api.get('/person/popular');
-        setPersons(results);
-      } catch (error) {
-        console.error('Error fetching persons:', error);
-      }
-    }
-
-    getMovies();
-    getTopMovies();
-    getTopSeries();
-    getPopularSeries();
-    getPersons();
+    getAllData();
   }, []);
 
   return (
@@ -93,7 +48,9 @@ export default function Home() {
                 <h1>{movies.title}</h1>
                 <p>{movies.overview}</p>
                 <div>
-                  <Button red onClick={() => navigate(`/detalhe/${movies.id}`)}>Assistir agora</Button>
+                  <Button red onClick={() => navigate(`/detalhe/${movies.id}`)}>
+                    Assistir agora
+                  </Button>
                   <Button onClick={() => setShowModal(true)}>
                     Assistir o trailer
                   </Button>

@@ -1,20 +1,13 @@
 import { useEffect, useState } from 'react';
-import api from '../../services/api';
 import { Background, CloseModal, Container } from './styles';
+import { getMovie } from '../../services/getData';
 
 export default function Modal({ movieId, setShowModal }) {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     async function getMovies() {
-      try {
-        const {
-          data: { results },
-        } = await api.get(`/movie/${movieId}/videos`);
-        setMovies(results[0]);
-      } catch (error) {
-        console.error('Error fetching movies:', error);
-      }
+      setMovies(await getMovie(movieId));
     }
     getMovies();
   }, [movieId]);
