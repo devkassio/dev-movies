@@ -5,6 +5,9 @@
 
     
   <br><br>
+   [Confira o Projeto aqui.](https://devkassio.github.io/dev-movies)
+  <br><br>
+  <br><br>
   <img alt="React" src="https://img.shields.io/badge/React-19.1.1-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
   <img alt="Vite" src="https://img.shields.io/badge/Vite-7.1.7-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
   <img alt="Styled Components" src="https://img.shields.io/badge/Styled_Components-6.1.19-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
