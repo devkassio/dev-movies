@@ -12,6 +12,8 @@ to {
 export const Background = styled.div`
   background-image: url(${(props) => props.img});
   height: 100dvh;
+  width: 100%;
+  max-width: 100vw;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -19,6 +21,11 @@ export const Background = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
+  /* Suporte para safe-area dos iPhones */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: border-box;
 
   &::before {
     content: '';
@@ -69,6 +76,7 @@ export const Container = styled.div`
   max-width: 100%;
   padding: 0 20px;
   gap: 40px;
+  box-sizing: border-box;
 
   @media (max-width: 1200px) {
     width: 100%;

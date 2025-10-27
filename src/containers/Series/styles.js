@@ -12,8 +12,12 @@ const gradientShift = keyframes`
 
 export const Container = styled.div`
   min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
   padding: 130px 20px 50px;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a0a1a 100%);
+  overflow-x: hidden;
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     padding: 100px 16px 40px;
@@ -164,8 +168,10 @@ export const SeriesGrid = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
   max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));

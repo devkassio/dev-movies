@@ -7,10 +7,16 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   width: 100%;
+  max-width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
+  /* Suporte para iPhones com notch */
+  padding-top: calc(15px + env(safe-area-inset-top));
+  padding-left: calc(20px + env(safe-area-inset-left));
+  padding-right: calc(20px + env(safe-area-inset-right));
+  box-sizing: border-box;
 
   background-color: ${(props) =>
     props.$changeBackground ? '#000000' : 'transparent'};
@@ -23,6 +29,9 @@ export const Container = styled.div`
   @media (max-width: 1024px) {
     min-height: 12vh;
     padding: 12px 15px;
+    padding-top: calc(12px + env(safe-area-inset-top));
+    padding-left: calc(15px + env(safe-area-inset-left));
+    padding-right: calc(15px + env(safe-area-inset-right));
 
     img {
       width: 300px;
@@ -32,6 +41,9 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     min-height: 10vh;
     padding: 10px 15px;
+    padding-top: calc(10px + env(safe-area-inset-top));
+    padding-left: calc(15px + env(safe-area-inset-left));
+    padding-right: calc(15px + env(safe-area-inset-right));
     flex-direction: column;
     gap: 10px;
 
@@ -43,6 +55,9 @@ export const Container = styled.div`
   @media (max-width: 480px) {
     min-height: 8vh;
     padding: 8px 10px;
+    padding-top: calc(8px + env(safe-area-inset-top));
+    padding-left: calc(10px + env(safe-area-inset-left));
+    padding-right: calc(10px + env(safe-area-inset-right));
 
     img {
       width: 200px;

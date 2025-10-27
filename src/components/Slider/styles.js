@@ -4,6 +4,10 @@ export const Container = styled.div`
   background: #000000;
   padding: 0 20px;
   margin-bottom: 40px;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  box-sizing: border-box;
 
   h2 {
     margin: 30px 0 20px 20px;
@@ -16,11 +20,20 @@ export const Container = styled.div`
   .swiper-wrapper {
     display: flex;
     padding-bottom: 10px;
+    width: fit-content;
+    max-width: none;
   }
 
   .swiper-slide {
     width: auto !important;
     flex-shrink: 0;
+    max-width: none;
+  }
+
+  /* Previne vazamento horizontal específico para mobile */
+  .swiper {
+    width: 100%;
+    overflow: hidden;
   }
 
   @media (max-width: 768px) {
